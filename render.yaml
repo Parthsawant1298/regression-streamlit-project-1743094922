@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: regression-streamlit-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run load_model.py
+    repo: https://github.com/Parthsawant1298/regression-streamlit-project-1743094922.git
+    branch: main
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.9.7"
